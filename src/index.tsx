@@ -4,6 +4,8 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import "./assets/fonts/Poppins/Poppins-Regular.ttf";
+import "./assets/fonts/Poppins/Poppins-Light.ttf";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

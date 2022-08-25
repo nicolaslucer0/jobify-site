@@ -6,11 +6,14 @@ import { NavElement } from "./components/NavElement";
 const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
   color: ${Violet};
   position: fixed;
   width: 100%;
   box-sizing: border-box;
+  background: white;
 `;
 const LinksContainer = styled.div`
   display: flex;
