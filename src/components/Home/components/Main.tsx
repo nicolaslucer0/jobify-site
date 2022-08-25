@@ -2,13 +2,6 @@ import styled from "@emotion/styled";
 import { Container, Grid } from "@mui/material";
 import ImageSrc from "../../../assets/images/2450449.png";
 import { Violet } from "../../../utils/Colors";
-const MainContainer = styled.main`
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 100vh;
-`;
 
 const Title = styled.h1`
   font-size: 3.5em;
