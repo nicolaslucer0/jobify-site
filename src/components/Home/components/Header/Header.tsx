@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import { Violet } from "../../../../utils/Colors";
-import { Logo } from "../Logo";
+import { Blue } from "../../../../utils/Colors";
+import { Logo } from "./components/Logo";
 import { NavElement } from "./components/NavElement";
 
 const NavContainer = styled.nav`
@@ -9,7 +9,7 @@ const NavContainer = styled.nav`
   align-items: center;
   padding: 0 20px;
   height: 60px;
-  color: ${Violet};
+  color: ${Blue};
   position: fixed;
   width: 100%;
   box-sizing: border-box;
@@ -20,8 +20,10 @@ const LinksContainer = styled.div`
   justify-content: space-between;
   a {
     text-decoration: none;
-    color: ${Violet};
-
+    color: ${Blue};
+    font-family: "Poppins";
+    text-transform: uppercase;
+    font-size: 12px;
     &:hover {
       cursor: pointer;
     }
