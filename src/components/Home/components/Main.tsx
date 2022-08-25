@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Container, Grid } from "@mui/material";
 import ImageSrc from "../../../assets/images/2450449.png";
 import { Violet } from "../../../utils/Colors";
 const MainContainer = styled.main`
@@ -8,23 +9,27 @@ const MainContainer = styled.main`
   justify-content: space-evenly;
   height: 100vh;
 `;
-const TitleContainer = styled.div`
-  width: 40%;
-  padding: 3em;
-`;
+
 const Title = styled.h1`
   font-size: 3.5em;
   color: ${Violet};
 `;
-const ImageContainer = styled.div``;
+
 const Image = styled.img``;
 export const Main = () => (
-  <MainContainer>
-    <TitleContainer>
+  <Grid
+    container
+    height="100vh"
+    display="flex"
+    justifyContent="center"
+    alignItems="center"
+  >
+    <Grid item xs={12} md={6} justifyContent="center" display="flex" p={5}>
       <Title>Pioneros en el modelo de trabajo flexible en Argentina.</Title>
-    </TitleContainer>
-    <ImageContainer>
+    </Grid>
+
+    <Grid item xs={12} md={6} justifyContent="center" display="flex">
       <Image src={ImageSrc} />
-    </ImageContainer>
-  </MainContainer>
+    </Grid>
+  </Grid>
 );
