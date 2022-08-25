@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import ImageSrc from "../../../assets/images/2450449.png";
 import { Violet } from "../../../utils/Colors";
 
