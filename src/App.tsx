@@ -6,8 +6,8 @@ import { Login } from "./components/Login/Login";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="about" element={<Home />} />
+      <Route path="/" element={<Home />} />
+      <Route path="login" element={<Login />} />
     </Routes>
   );
 }
