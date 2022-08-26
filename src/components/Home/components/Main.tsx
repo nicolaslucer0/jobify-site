@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 import { Button, Grid } from "@mui/material";
-import ImageSrc from "../../../assets/images/2450449.jpeg";
+import ImageSrc from "../../../assets/images/main.jpg";
 import { Blue, LightGray } from "../../../utils/Colors";
-import { Image } from "../../../utils/Commons";
+import { Column, Container } from "../../../utils/Commons";
 
 const Title = styled.h1`
   font-size: 60px;
@@ -12,6 +12,10 @@ const Title = styled.h1`
   line-height: 70px;
   margin: 0;
   font-family: "Poppins";
+  @media only screen and (max-width: 600px) {
+    font-size: 40px;
+    line-height: 50px;
+  }
 `;
 const Description = styled.p`
   font-size: 20px;
@@ -21,23 +25,20 @@ const Description = styled.p`
   font-family: "PoppinsLight";
 `;
 
+const MainImage = styled.img`
+  border-radius: 10%;
+  position: relative;
+  object-fit: cover;
+  right: -100px;
+  width: 100%;
+  @media only screen and (max-width: 600px) {
+    right: 0;
+  }
+`;
+
 export const Main = () => (
-  <Grid
-    container
-    display="flex"
-    justifyContent="center"
-    alignItems="center"
-    paddingTop="60px"
-  >
-    <Grid
-      item
-      xs={12}
-      md={6}
-      justifyContent="center"
-      display="flex"
-      flexDirection="column"
-      padding="0 8em"
-    >
+  <Container>
+    <Column className="xs">
       <Title>Pioneros en el modelo de trabajo flexible en Argentina.</Title>
       <Description>
         Brindamos a los trabajadores a tiempo parcial la libertad de una vida
@@ -55,10 +56,10 @@ export const Main = () => (
           Buscar trabajo
         </Button>
       </Grid>
-    </Grid>
+    </Column>
 
-    <Grid item xs={12} md={6} justifyContent="center" display="flex">
-      <Image src={ImageSrc} />
-    </Grid>
-  </Grid>
+    <Column className="xs" style={{ padding: "3em" }}>
+      <MainImage src={ImageSrc} />
+    </Column>
+  </Container>
 );

@@ -1,25 +1,14 @@
-import { Grid } from "@mui/material";
-import { Image, InfoDescription, InfoTitle } from "../../../../utils/Commons";
+import {
+  Column,
+  Container,
+  Image,
+  InfoDescription,
+  InfoTitle,
+} from "../../../../utils/Commons";
 import ImageSrc from "../../../../assets/images/phone.webp";
 export const AppInfo = () => (
-  <Grid
-    container
-    xs={12}
-    md={11}
-    display="flex"
-    alignItems="flex-start"
-    justifyContent="space-evenly"
-    padding="8em"
-  >
-    <Grid
-      item
-      xs={12}
-      md={9}
-      justifyContent="center"
-      display="flex"
-      flexDirection="column"
-      padding="0 5em"
-    >
+  <Container>
+    <Column className="xs">
       <InfoTitle>Todo en el mismo lugar</InfoTitle>
       <InfoDescription>
         Es fácil registrarse en la aplicación Zenjob y solo necesita hacerlo una
@@ -28,16 +17,9 @@ export const AppInfo = () => (
         mostramos en su fuente de trabajo. Simplemente navegue por ellos y
         luego, con un solo clic, reserve los trabajos que más le gusten.
       </InfoDescription>
-    </Grid>
-    <Grid
-      item
-      xs={12}
-      md={3}
-      justifyContent="center"
-      display="flex"
-      flexDirection="column"
-    >
+    </Column>
+    <Column className="xs">
       <Image src={ImageSrc} />
-    </Grid>
-  </Grid>
+    </Column>
+  </Container>
 );

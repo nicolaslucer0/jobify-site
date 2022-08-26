@@ -32,7 +32,7 @@ export const Info = () => {
           </div>
         </Grid>
         <Grid xs={12} md={4} p={2}>
-          <InfoTitle>No mas busquedas</InfoTitle>
+          <InfoTitle>No mas búsquedas</InfoTitle>
           <div>Automaticamente hacemos match con los trabajos para tí.</div>
         </Grid>
         <Grid item xs={12} md={4} p={2}>

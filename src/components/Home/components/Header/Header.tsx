@@ -14,6 +14,7 @@ const NavContainer = styled.nav`
   width: 100%;
   box-sizing: border-box;
   background: white;
+  z-index: 1;
 `;
 const LinksContainer = styled.div`
   display: flex;
