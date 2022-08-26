@@ -7,7 +7,7 @@ import {
   InfoTitle,
 } from "../../../../utils/Commons";
 export const ExtraInfo = () => (
-  <Container>
+  <Container className="full-height">
     <Column className="xs">
       <InfoTitle>Dinero extra</InfoTitle>
       <InfoDescription>

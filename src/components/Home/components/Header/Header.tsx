@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 import { Blue } from "../../../../utils/Colors";
 import { Logo } from "./components/Logo";
 import { NavElement } from "./components/NavElement";
@@ -15,6 +16,7 @@ const NavContainer = styled.nav`
   box-sizing: border-box;
   background: white;
   z-index: 1;
+  top: 0;
 `;
 const LinksContainer = styled.div`
   display: flex;
@@ -33,12 +35,14 @@ const LinksContainer = styled.div`
 
 export const Header = () => (
   <NavContainer>
-    <Logo />
+    <Link to="/">
+      <Logo />
+    </Link>
     <LinksContainer>
       <NavElement link="login" text="Para compañias" />
       <NavElement link="login" text="Para buscar trabajo" />
       <NavElement link="login" text="Sobre nosotros" />
-      <NavElement link="login" text="Iniciar sesión" />
+      <NavElement link="/login" text="Iniciar sesión" />
     </LinksContainer>
   </NavContainer>
 );

@@ -7,7 +7,7 @@ import {
   InfoTitle,
 } from "../../../../utils/Commons";
 export const TimeInfo = () => (
-  <Container>
+  <Container className="full-height">
     <Column className="xs">
       <Image src={ImageSrc} />
     </Column>

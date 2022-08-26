@@ -7,7 +7,7 @@ import {
 } from "../../../../utils/Commons";
 import ImageSrc from "../../../../assets/images/phone.webp";
 export const AppInfo = () => (
-  <Container>
+  <Container className="full-height">
     <Column className="xs">
       <InfoTitle>Todo en el mismo lugar</InfoTitle>
       <InfoDescription>

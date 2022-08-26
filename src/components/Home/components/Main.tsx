@@ -37,7 +37,7 @@ const MainImage = styled.img`
 `;
 
 export const Main = () => (
-  <Container>
+  <Container className="full-height">
     <Column className="xs">
       <Title>Pioneros en el modelo de trabajo flexible en Argentina.</Title>
       <Description>
