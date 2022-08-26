@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Button, Grid } from "@mui/material";
 import ImageSrc from "../../../assets/images/2450449.jpeg";
 import { Blue, LightGray } from "../../../utils/Colors";
+import { Image } from "../../../utils/Commons";
 
 const Title = styled.h1`
   font-size: 60px;
@@ -20,9 +21,6 @@ const Description = styled.p`
   font-family: "PoppinsLight";
 `;
 
-const Image = styled.img`
-  width: 100%;
-`;
 export const Main = () => (
   <Grid
     container

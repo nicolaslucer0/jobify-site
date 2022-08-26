@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Grid } from "@mui/material";
 import { Blue } from "../../../../utils/Colors";
+import { InfoTitle } from "../../../../utils/Commons";
 
 const InfoContainer = styled(Grid)`
   color: white;
@@ -12,12 +13,6 @@ const InfoContainer = styled(Grid)`
   position: relative;
 `;
 
-const InfoTitle = styled(Grid)`
-  font-family: "Poppins";
-  font-weight: bold;
-  margin-bottom: 5px;
-  font-size: 30px;
-`;
 export const Info = () => {
   return (
     <InfoContainer>
@@ -37,7 +32,7 @@ export const Info = () => {
           </div>
         </Grid>
         <Grid xs={12} md={4} p={2}>
-          <InfoTitle>No mas busquedas laborales</InfoTitle>
+          <InfoTitle>No mas busquedas</InfoTitle>
           <div>Automaticamente hacemos match con los trabajos para tí.</div>
         </Grid>
         <Grid item xs={12} md={4} p={2}>
