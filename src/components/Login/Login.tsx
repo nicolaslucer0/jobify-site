@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
 import { Box, Button, Card, TextField } from "@mui/material";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useCallback, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ImageSrc from "../../assets/images/main.jpg";
 import { Blue } from "../../utils/Colors";
 import { Column, Container } from "../../utils/Commons";
 import { isValidEmail } from "../../utils/Validations";
 import { Logo } from "../Home/components/Header/components/Logo";
-import { Header } from "../Home/components/Header/Header";
 const LoginImage = styled.img`
   width: 100%;
   height: 100%;
@@ -33,6 +33,7 @@ const StyledCard = styled(Card)`
 `;
 
 export const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState({ value: "", error: "" });
   const [pass, setPass] = useState({ value: "", error: "" });
 
@@ -46,13 +47,13 @@ export const Login = () => {
     setPass({ value: event.target.value, error: "" });
   };
 
-  const onLoginClick = () => {
-    //TODO: call api and go to home
-  };
+  const onLoginClick = useCallback(
+    () => navigate("/dashboard", { replace: true }),
+    [navigate]
+  );
 
   return (
     <HomeContainer>
-      <Header />
       <StyledCard>
         <Container>
           <Column

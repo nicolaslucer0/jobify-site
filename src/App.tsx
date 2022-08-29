@@ -1,14 +1,22 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Home } from "./components/Home/Home";
-import { Login } from "./components/Login/Login";
+import Dashboard from "./components/Dashboard";
+import Header from "./components/Home/components/Header";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import Offers from "./components/Offers";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="login" element={<Login />} />
-    </Routes>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="login" element={<Login />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="offer" element={<Offers />} />
+      </Routes>
+    </>
   );
 }
 
