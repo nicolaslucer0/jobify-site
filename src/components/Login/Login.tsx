@@ -3,6 +3,7 @@ import { Box, Button, Card, TextField } from "@mui/material";
 import { ChangeEvent, useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ImageSrc from "../../assets/images/main.jpg";
+import UserService from "../../services/UserService";
 import { Blue } from "../../utils/Colors";
 import { Column, Container } from "../../utils/Commons";
 import { isValidEmail } from "../../utils/Validations";
@@ -47,10 +48,13 @@ export const Login = () => {
     setPass({ value: event.target.value, error: "" });
   };
 
-  const onLoginClick = useCallback(
-    () => navigate("/dashboard", { replace: true }),
-    [navigate]
-  );
+  const onLoginClick = useCallback(() => {
+    UserService.setName("Nicolas");
+    UserService.setPicture(
+      "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745"
+    );
+    navigate("/offers", { replace: true });
+  }, [navigate]);
 
   return (
     <HomeContainer>

@@ -29,6 +29,23 @@ export const Container = styled.div`
   &.full-height {
     height: 100vh;
   }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
+  &.xs {
+    width: 30%;
+  }
+  &.md {
+    width: 50%;
+  }
+  &.xl {
+    width: 70%;
+  }
+  &.full {
+    width: 100%;
+  }
   @media only screen and (max-width: 600px) {
     width: 100%;
     flex-direction: column;
@@ -48,6 +65,9 @@ export const Column = styled.div`
   }
   &.xl {
     width: 70%;
+  }
+  &.full {
+    width: 100%;
   }
 
   @media only screen and (max-width: 600px) {
